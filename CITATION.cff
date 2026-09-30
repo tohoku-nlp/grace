@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use GRACE, please cite the paper and/or this software."
+title: "GRACE: A Tunable Metric Unifying Accuracy and Efficiency for Robotics Evaluation"
+authors:
+  - family-names: Sakaguchi
+    given-names: Keisuke
+    affiliation: Tohoku University
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/tohoku-nlp/grace"
+type: software
+preferred-citation:
+  type: conference-paper
+  title: "GRACE: A Tunable Metric Unifying Accuracy and Efficiency for Robotics Evaluation"
+  authors:
+    - family-names: Sakaguchi
+      given-names: Keisuke
+      affiliation: Tohoku University
+  collection-title: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  year: 2026

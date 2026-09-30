@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.venv/
+venv/
+
+# Generated benchmark outputs (reproduce with the scripts in benchmarks/)
+benchmarks/figures/*
+!benchmarks/figures/.gitkeep
+
+# OS / editor
+.DS_Store

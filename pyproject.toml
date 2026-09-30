@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "grace_metric"
+dynamic = ["version"]
+description = "GRACE: a tunable metric unifying accuracy and efficiency for robotics evaluation."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Keisuke Sakaguchi", email = "keisuke.sakaguchi@tohoku.ac.jp" }]
+keywords = ["robotics", "evaluation", "metric", "benchmark", "embodied-ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+
+dependencies = []  # core metric is pure standard library
+
+[project.optional-dependencies]
+notebook = ["matplotlib>=3.5", "numpy>=1.21", "ipywidgets>=8", "jupyterlab>=4"]
+dev = ["pytest>=7", "matplotlib>=3.5", "numpy>=1.21"]
+
+[project.urls]
+Homepage = "https://github.com/tohoku-nlp/grace"
+Repository = "https://github.com/tohoku-nlp/grace"
+Issues = "https://github.com/tohoku-nlp/grace/issues"
+
+[tool.hatch.version]
+path = "src/grace_metric/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/grace_metric"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/grace_metric",
+    "tests",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CITATION.cff",
+    "pyproject.toml",
+]
+exclude = [
+    "**/__pycache__",
+    "**/*.pyc",
+    "*.zip",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
